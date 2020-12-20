@@ -1,5 +1,5 @@
 import java.util.HashSet;
-
+/* TODO: Remove this */
 public class MoveSet {
     private HashSet<Move> moves;
 
@@ -9,7 +9,7 @@ public class MoveSet {
         HashSet<Move> moves = new HashSet<Move>();
     }
 
-    public void clearMoves {
+    public void clearMoves() {
         moves = new HashSet<Move>();
     }   
 
@@ -17,7 +17,9 @@ public class MoveSet {
         moves.add(move);
     }
 
-
+    public boolean contains(Move move) {
+        return moves.contains(move);
+    }
 
 
 

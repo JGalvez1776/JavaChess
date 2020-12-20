@@ -1,7 +1,7 @@
 public class Move {
-    int x;
-    int y;
-
+    private int x;
+    private int y;
+    private static int boardHeight;
 
     public Move() {
         this(0, 0);
@@ -9,12 +9,23 @@ public class Move {
 
     public Move(int x, int y) {
         this.x = x;
-        this.y = y;
+        this.y = boardHeight - y;
     }
 
     public String toString() {
-        return "Test";
+        return "(" + x + "," + y + ")";
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public static void alignToBoard(Board board) {
+        boardHeight = board.getHeight() - 1;
+    }
 
 }

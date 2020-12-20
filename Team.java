@@ -1,22 +1,28 @@
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Team {
-    private int id;
-    private static HashMap<Integer, String> teamIDs;
+    private static List<Team> teams = new ArrayList<Team>();
+    
     private HashSet<Piece> pieces;
 
-    
-    public Team(int id) {
-        if (!teamIDs.containsKey(id)) {
-            throw new IllegalArgumentException("Teams not logged require a team name.");
-        }
-        // TODO: Create a new player of this team. Only useful for multiplayer?
+    public Team(String teamName) {
+        /* TODO: Put a check to see if there is a duplicate team name? */
+        this.pieces = new HashSet<Piece>();
+        teams.add(this);
     }
 
-    public Team(int id, String teamName) {
-        this.id = id;
-        this.pieces = new HashSet<Piece>();
+    public void addPiece(Piece piece) {
+        pieces.add(piece);
+    }
+
+    public void removePiece(Piece piece) {
+        pieces.remove(piece);
+    }
+
+    public static List<Team> getTeams() {
+        return teams;
     }
 
 
