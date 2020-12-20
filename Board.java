@@ -4,7 +4,6 @@ public abstract class Board {
     private int height;
     private Piece[][] board;
     private String rowString;
-    private String bottomRowString;
 
     public abstract void populateBoard();
 
