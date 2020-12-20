@@ -1,21 +1,25 @@
 import java.util.List;
 
 public class Game {
-    private List<Player> teams;
+    private List<Player> players;
     private int activePlayerNum;
+    private Board board;
 
 
-    public Game() {
-        this.teams = Player.getTeams();
+
+    public Game(Board board) {
+        this.board = board;
+        this.players = Player.getPlayers();
         activePlayerNum = -1;
+        
     }
 
     public Player nextPlayer() {
         activePlayerNum++;
-        if (activePlayerNum > teams.size() - 1) {
+        if (activePlayerNum > players.size() - 1) {
             activePlayerNum = 0;
         }
-        return teams.get(activePlayerNum);
+        return players.get(activePlayerNum);
     }
 
 } 

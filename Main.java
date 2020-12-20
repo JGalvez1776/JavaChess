@@ -4,7 +4,7 @@ public class Main {
         System.out.println(board);
 
 
-        Team white = new Team("White");
+        Player white = new Player("White");
         board.place(new Pawn(white), new Move(4, 4));
         System.out.println(board);
 

@@ -20,11 +20,11 @@ public abstract class Piece {
         return moves.contains(move);
     }
 
-    private void clearMove() {
+    public void clearMove() {
         moves = new HashSet<Move>();
     }
 
-    private void addMove(Move move) {
+    public void addMove(Move move) {
         moves.add(move);
     }
 

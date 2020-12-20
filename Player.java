@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Player {
-    private static List<Player> teams = new ArrayList<Player>();
+    private static List<Player> players = new ArrayList<Player>();
     private String name;
     private HashSet<Piece> pieces;
 
@@ -11,7 +11,7 @@ public class Player {
         /* TODO: Put a check to see if there is a duplicate team name? */
         this.name = teamName;
         this.pieces = new HashSet<Piece>();
-        teams.add(this);
+        players.add(this);
     }
 
     public void addPiece(Piece piece) {
@@ -22,8 +22,8 @@ public class Player {
         pieces.remove(piece);
     }
 
-    public static List<Player> getTeams() {
-        return teams;
+    public static List<Player> getPlayers() {
+        return players;
     }
 
     public String toString() {
