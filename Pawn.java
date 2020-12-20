@@ -1,6 +1,6 @@
 public class Pawn extends Piece {
 
-    public Pawn(Team team) {
+    public Pawn(Player team) {
         super(team);
     }
 

@@ -1,6 +1,6 @@
 public class Knight extends Piece {
 
-    public Knight(Team team) {
+    public Knight(Player team) {
         super(team);
     }
 

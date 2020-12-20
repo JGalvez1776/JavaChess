@@ -2,10 +2,10 @@ import java.util.HashSet;
 
 public abstract class Piece {
     private HashSet<Move> moves;
-    private Team team;
+    private Player team;
     
 
-    public Piece(Team team) {
+    public Piece(Player team) {
         this.team = team;
         this.moves = new HashSet<Move>();
     }

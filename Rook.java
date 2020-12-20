@@ -1,6 +1,6 @@
 public class Rook extends Piece {
 
-    public Rook(Team team) {
+    public Rook(Player team) {
         super(team);
     }
 

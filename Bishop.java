@@ -1,6 +1,6 @@
 public class Bishop extends Piece {
 
-    public Bishop(Team team) {
+    public Bishop(Player team) {
         super(team);
     }
 

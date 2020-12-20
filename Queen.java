@@ -1,6 +1,6 @@
 public class Queen extends Piece {
 
-    public Queen(Team team) {
+    public Queen(Player team) {
         super(team);
     }
 
