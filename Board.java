@@ -5,7 +5,7 @@ public abstract class Board {
     private Piece[][] board;
     private String rowString;
 
-    public abstract void populateBoard();
+    protected abstract void populateBoard();
 
     public Board(int width, int height) {
         this.width = width;
