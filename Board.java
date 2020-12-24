@@ -24,8 +24,16 @@ public abstract class Board {
         this(dimension, dimension);
     }
 
-    protected void place(Piece piece, Move move) {
+    /**
+     * Adds a piece to the board.
+     * Note: To only be used in placing pieces initially and in public move method.
+     */
+    protected void place(Piece piece, int x, int y) {
         // TODO: Implement a check here to make sure it is being placed on the board.
+        board[y][x] = piece;
+    }
+
+    protected void place(Piece piece, Move move) {
         board[move.getY()][move.getX()] = piece;
     }
 
