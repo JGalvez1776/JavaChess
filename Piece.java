@@ -2,14 +2,12 @@ import java.util.HashSet;
 
 public abstract class Piece {
     private HashSet<Move> moves;
-    private Player team;
-    
+    private Player player;
 
-    public Piece(Player team) {
-        this.team = team;
+    public Piece(Player player) {
+        this.player = player;
         this.moves = new HashSet<Move>();
     }
-
     /*TODO: Implement move function. Should be the same may implement in the board? */
 
     public abstract void findMoves(Board board);
@@ -28,5 +26,10 @@ public abstract class Piece {
         moves.add(move);
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public abstract String toString();
 
 }
