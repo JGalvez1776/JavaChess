@@ -1,7 +1,7 @@
 public class Move {
     private int x;
     private int y;
-    private static int boardHeight;
+    private static int boardHeight = 7;
 
     public Move() {
         this(0, 0);
@@ -24,6 +24,9 @@ public class Move {
         return y;
     }
 
+    /**
+     * Use this is the board height is not 8. 
+     */
     public static void alignToBoard(Board board) {
         boardHeight = board.getHeight() - 1;
     }
